@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="pasword.css">
+</head>
+<body>
+    <!-- create container -->
+    <div class="container">
+        <h1>password Generator</h1>
+        <div class="display-container">
+            <!-- input tag -->
+            <input readonly placeholder="Pasword" class="display" data-paswordDisplay>
+            <!-- data-psawordDisplay:- it is coustom attribute of input tag  (iska use data ko fetch karne liye karte hai 
+                jaise document me data ko fetch ka use karte hai id or class use karke wise bhi iss method is data ko ftech
+                kar sakte hai) -->
+
+                <!-- create copy button -->
+                <button data-copy>
+                    <span data-CopyMsg></span>
+                    <img src="./image/pngtree-vector-copy-icon-png-image_695355.jpg" alt="copy" width="23" height="23">
+                </button>
+        </div>
+
+        <!-- create input container -->
+        <div class="input-container">
+            <div class="length-container">
+                <p>Pasword length</p>
+                <!-- ab js ka use krna hai to niche wala para ko coutom id provide kard denge -->
+                <p data-lengthNumber> 0</p>
+
+            </div>
+            <!-- create a slider using inpurt tag -->
+            <input type="Range" min="1" max="20" class="slider" step="1" data-lengthSlider> 
+            <!-- uper coustom id is liye diye hai jab slider k o ghuma rahe to ek number show ho
+            raha hai issliye use kiye hai taki easy way me js ko use kar ske -->
+
+            <!-- create  checkBox -->
+            <div class="check">
+                <!-- create the chackBOx using input tag -->
+                <input type="checkbox" id="uppercase">
+                <label for="uppercase">Includes uppercase letters</label>
+            </div>
+
+            <div>
+                <!--  chackBOx2  -->
+                <input type="checkbox" id="Lowercase">
+                <label for="Lowercase">Includes Lowercase letters</label>
+            </div>
+
+            <div>
+                <!--  chackBOx3  -->
+                <input type="checkbox" id="numbers">
+                <label for="numbers">Includes Numbers letters</label>
+            </div>
+
+            <div>
+                <!--  chackBOx4  -->
+                <input type="checkbox" id="symbols">
+                <label for="symbols">Includes Symbols letters</label>
+            </div>
+
+            <!-- create strength section -->
+            <div class="strength-container">
+                <p>Strength</p>
+                <!-- create the symbol (o symbol jo posword ko strong dalne ke uese karte hai 
+                    using  coustom id ) -->
+                <div date-indicator></div>
+
+            </div>
+
+            <!-- genrate password button -->
+            
+            <button class="genrateButton">Genrate Pasword</button>
+
+
+        </div>
+
+    </div>
+    <script src="pasword.js"></script>
+</body>
+</html>
